@@ -36,6 +36,8 @@
 // } else {
 //   console.log('Nama tidak ditemukan');
 // }
+// const id = '_42Z8lwg9ergqT7a';
+
 const books = [
   {
     'id': '_42Z8lwg9ergqT7a',
@@ -52,8 +54,8 @@ const books = [
     'updatedAt': '2023-03-08T16:54:20.684Z',
   },
   {
-    'id': '_42Z8lwg9ergqT7a',
-    'name': 'Ini Buku baru',
+    'id': '_42Z8lwg9ergqT7ab',
+    'name': 'Ini Buku baru Dicoding',
     'year': 2023,
     'author': 'Gamma',
     'summary': 'Buku ini menceritakan tentang',
@@ -66,7 +68,60 @@ const books = [
     'updatedAt': '2023-03-08T16:54:20.684Z',
   },
 ];
+// const index = books.findIndex((n) => n.id === id);
 
-const newBook = books.map(({id, name, publisher}) => ({id, name, publisher}));
+const coba = 'dicoding';
 
-console.log(newBook);
+const filterBook = books.filter((book) => book.name.toLowerCase()
+    .includes(coba.toLowerCase()));
+
+console.log(filterBook);
+
+const books2 = [
+  {
+    'id': 'bJNWCj_7qvVgYgZE',
+    'name': 'Buku A',
+    'publisher': 'Dicoding Indonesia',
+    'reading': 1,
+  },
+  {
+    'id': 'B--rDvfqTHY8BpeX',
+    'name': 'Kelas Dicoding',
+    'publisher': 'Dicoding Indonesia',
+    'reading': 0,
+  },
+  {
+    'id': '1axzZka5HedbWHv-',
+    'name': 'dicoding Jobs',
+    'publisher': 'Dicoding Indonesia',
+    'reading': 1,
+  },
+  {
+    'id': 'GLiPv2ySSdWW2SxI',
+    'name': 'Buku A',
+    'publisher': 'Dicoding Indonesia',
+    'reading': 1,
+  },
+];
+
+const reading = 1;
+
+const filterBook2 = books2.filter((book) => book.reading === reading);
+
+console.log(filterBook2);
+
+// const updatedAt = new Date().toISOString();
+// const newBook = books.map(({id, name, publisher})
+// => ({id, name, publisher}));
+
+// books[index] = {
+//   ...books[index],
+//   name,
+//   updatedAt,
+// };
+
+// console.log(books);
+
+// books.splice(index, 2);
+
+// console.log(books);
